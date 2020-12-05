@@ -1,0 +1,22 @@
+.boardCard_container {
+    position: absolute;
+    width: 215px;
+    height: 176px;
+    left: 0px;
+    top: 0px;
+    }
+    .boardCard_title__text {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+    }
+    .boardCard_pinsIncluded {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+    }

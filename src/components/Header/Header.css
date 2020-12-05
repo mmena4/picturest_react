@@ -1,0 +1,7 @@
+.header_container {
+    height: 48px;
+    width: 162;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+}

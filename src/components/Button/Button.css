@@ -1,0 +1,19 @@
+.button {
+    position: absolute;
+    width: 113px;
+    height: 43px;
+    left: 237px;
+    top: 23px;
+    background: #FFFFFF;
+    border-radius: 21.5px;
+  }
+
+  .button:hover {
+    position: absolute;
+    width: 113px;
+    height: 43px;
+    left: 237px;
+    top: 23px;
+    background: #000000;
+    border-radius: 21.5px;
+  }
