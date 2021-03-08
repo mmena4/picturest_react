@@ -5,6 +5,8 @@ on: [push, pull_request]
 
 jobs:
   build:
+
+     if: github.event_name == 'push' && github.ref != 'refs/heads/main'
     runs-on: ubuntu-latest
     env:
       TOKEN_SECRET: SuperSecretToken
@@ -58,7 +60,7 @@ PublishToNetlify:
           secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
 
 
-Enviar mensaje a fsd1120
+
 
 
 
