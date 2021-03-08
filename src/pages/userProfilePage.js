@@ -1,5 +1,6 @@
 import UserCard from "../components/userCard/UserCard";
 import BoardList from "../components/boardList/BoardList";
+import PinsList from "../components/pinsList/PinsList";
 
 export const UserProfilePage = ({ user }) => {
 
@@ -11,12 +12,13 @@ export const UserProfilePage = ({ user }) => {
   return (
     <>
       <UserCard
-        avatar={user.avatar}
+        avatar={localStorageUser.avatar}
         userName={localStorageUser.username}
         followingCount={user.following && user.following.length}
         fullName={`${localStorageUser.firstName} ${localStorageUser.lastName}`}
       />
       <BoardList />
+      <PinsList />
     </>
   );
 };

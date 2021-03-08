@@ -15,8 +15,19 @@ const createBoard = (boardData) => {
 
 const BoardList = () => {
   const [boards, setBoards] = useState([]);
+  
+
+  const localStorageUser = JSON.parse(localStorage.getItem('user'));
+  
+  let UserId = null;
+  if (localStorageUser === null) {
+      UserId = 1;
+  }else{
+      UserId = localStorageUser._id;
+    }
+
   useEffect(() => {
-    fetch("http://localhost:5000/api/boards")
+    fetch("http://localhost:5000/api/users/"+UserId+"/boards")
       .then((response) => response.json())
       .then((json) => setBoards(json));
   }, []);
@@ -26,7 +37,7 @@ const BoardList = () => {
       <span className="boardsList__title">Boards</span>
       <div className="boardsList__container">
         {boards.map((board) => (
-          <BoardCard board={board} key={board.id} />
+          <BoardCard board={board} key={board._id} />
         ))}
       </div>
     </div>

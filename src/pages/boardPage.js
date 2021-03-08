@@ -23,7 +23,6 @@ export const BoardPage = () => {
         <p>{board.title}</p>
         <p>{board.author}</p>
       </div>
-      <PinsList />
     </div>
   );
 };

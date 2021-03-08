@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./PinsList.css";
 import PinCard from "../pinCard/PinCard";
 
+
 const PinsList = () => {
   const [pins, setPins] = useState([]);
 
@@ -22,7 +23,7 @@ const PinsList = () => {
   return (
     <div>
       <span className="pinsList__title">Pins</span>
-      <input
+      {/* <input
         name="title"
         onChange={(event) => {
           setFormData({ ...formData, title: event.target.value });
@@ -33,7 +34,7 @@ const PinsList = () => {
         onChange={(event) => {
           setFormData({ ...formData, description: event.target.value });
         }}
-      />
+      /> */}
       <div className="pinsList__container">
         {pins.map((pin) => (
           <PinCard pin={pin} key={pin.id} />

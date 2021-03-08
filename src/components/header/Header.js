@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 
 const Header = ({ user, token }) => {
   const history = useHistory();
+  const localStorageUser = JSON.parse(localStorage.getItem('user'));
   return (
     <div className="header__container">
       <div className="header__logo">
@@ -16,7 +17,7 @@ const Header = ({ user, token }) => {
           {token ?
               <img
                   onClick={() => history.push('/user')}
-                  src={user.avatar}
+                  src={localStorageUser.avatar}
                   className="header_userInfo__image"
                   alt="User avatar"
               /> :
